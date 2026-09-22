@@ -1,4 +1,4 @@
-# Minimal Ansible project to demonstrate typical directory structure
+# MZ Student Ansible project to demonstrate typical directory structure
 
 ```shell
 .
