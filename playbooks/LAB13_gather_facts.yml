@@ -10,3 +10,8 @@
     ibm.ibm_zos_core.zos_gather_facts:
       gather_subset: sys 
 
+  - name: Print return info from previous task
+    ansible.builtin.debug:
+      var: zos_facts 
+      
+        
