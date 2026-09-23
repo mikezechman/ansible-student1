@@ -14,7 +14,7 @@
   register: stcs
 
 
- - name: Print return info from previous task
+   name: Print return info from previous task
     ansible.builtin.debug:
       var: stcs 
 
