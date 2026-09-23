@@ -12,7 +12,7 @@
       set_fact:
         stcs: >-
         {{
-          active_jobs.jobs
+        active_jobs.jobs
         | selectattr('job_class', 'defined')
         | selectattr('job_class', 'equalto', 'STC')
         | list
