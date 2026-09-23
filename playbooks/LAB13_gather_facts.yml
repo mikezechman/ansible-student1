@@ -1,5 +1,4 @@
-name: Return all available z/OS facts.
-name: Ping z/OS node
+- name: Return all available z/OS facts.
   hosts: zos
   gather_facts: false
   environment: "{{ environment_vars }}"
