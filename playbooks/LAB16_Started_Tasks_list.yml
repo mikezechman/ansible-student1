@@ -7,7 +7,7 @@
 
   - name: Display all started tasks.
     ibm.ibm_zos_core.zos_job_query:
-      register: active_jobs
+    register: active_jobs
   - name: Keep only started tasks
     set_fact:
       stcs: >-
