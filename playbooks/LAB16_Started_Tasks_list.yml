@@ -5,17 +5,31 @@
 
   tasks:
 
-  name: Display all started tasks.
-  zos_started_task:
+  - name: Display all started tasks.
+  ibm.ibm_zos_core.zos_job_query:
+    job_class: STC
     state: "displayed"
     job_name: "all"
        
   register: stcs
 
 
- name: Print return info from previous task
+ - name: Print return info from previous task
     ansible.builtin.debug:
       var: stcs 
+
+
+# name: Display all started tasks.
+#  ibm.ibm_zos_core.zos_started_task:
+#    state: "displayed"
+#    job_name: "all"
+       
+#  register: stcs
+
+
+# name: Print return info from previous task
+#    ansible.builtin.debug:
+#      var: stcs 
 
       
  #  - name: Print return info from previous task
