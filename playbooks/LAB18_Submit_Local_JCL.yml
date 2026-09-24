@@ -1,0 +1,17 @@
+- name: LAB 17 Submit INLINE JCL
+  hosts: zoslab
+  gather_facts: false
+  collections:
+    - ibm.ibm_zos_core
+  environment: "{{ environment_vars }}"
+
+  tasks:
+
+      - name: Submit Hello World job from local JCL 
+     zos_job_submit:
+        src: "{{ playbook_dir }}/JCL/hello_world.jcl
+        location: LOCAL 
+        encoding:
+          from: ISO8859-1
+          to: IBM-037
+     
