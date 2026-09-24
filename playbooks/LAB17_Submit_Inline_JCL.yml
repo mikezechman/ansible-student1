@@ -17,12 +17,12 @@
           //STDPARM  DD *
           SH echo "Hello, World from z/OS!"
           /*
-        dest: /u/ibmuser/hello_world.jcl
+        dest: /u/GAMA01/hello_world.jcl
         force: true
 
    - name: Submit Hello World job
      zos_job_submit:
-        src: /u/ibmuser/hello_world.jcl
+        src: /u/GAMA01/hello_world.jcl
         location: USS
         wait_time_s: 60
         return_output: true
