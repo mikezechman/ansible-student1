@@ -1,0 +1,22 @@
+- name: LAB 18 Submit INLINE JCL
+  hosts: zoslab
+  gather_facts: false
+  collections:
+    - ibm.ibm_zos_core
+  environment: "{{ environment_vars }}"
+  vars:
+    jobname: "GAMA0120"
+
+  tasks:
+  - name: Submit Hello World job from local JCL 
+    zos_job_submit:
+      src: "{{ playbook_dir }}/JCL/hello_world_20.jcl"
+      location: LOCAL 
+      encoding:
+        from: ISO8859-1
+        to: IBM-037
+    register: job_results
+
+  - name: Show job ID and return code
+    ansible.builtin.debug:
+      msg: "Job Id: {{ job_results.jobs[0].job_id }}"
