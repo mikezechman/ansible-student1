@@ -1,4 +1,4 @@
-- name: LAB 17 Submit INLINE JCL 
+- name: LAB 17 Submit INLINE JCL
   hosts: zos
   gather_facts: false
   collections:
