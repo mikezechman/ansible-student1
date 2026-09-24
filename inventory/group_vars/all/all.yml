@@ -3,7 +3,7 @@ PYZ: "/usr/lpp/IBM/cyp/v3r11/pyz"
 ZOAU: "/usr/lpp/IBM/zoautil"
 FILE_XFER_DIR: "../data"
 ansible_pipelining: true
-zos_jcl_source: "GAMA01.DEMO.JCLLIB(LAB19)"
+
 
 environment_vars:
   _BPXK_AUTOCVT: "ON"
