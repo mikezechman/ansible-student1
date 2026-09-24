@@ -6,7 +6,6 @@
   environment: "{{ environment_vars }}"
 
   tasks:
-
       - name: Submit Hello World job from local JCL 
         zos_job_submit:
         src: "{{ playbook_dir }}/JCL/hello_world.jcl
