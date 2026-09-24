@@ -15,6 +15,6 @@
         to: IBM-037
       register: job_output
 
-   - name: Show job ID and return code
-     debug:
-       var: job_output
+  - name: Show job ID and return code
+    debug:
+      var: job_output
