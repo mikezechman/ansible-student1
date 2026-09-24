@@ -1,4 +1,4 @@
-- name: Return all Started Tasks.
+- name: LAB 17 Submit INLINE JCL 
   hosts: zos
   gather_facts: false
   collections:
