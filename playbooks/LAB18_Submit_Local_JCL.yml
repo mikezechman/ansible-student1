@@ -1,4 +1,4 @@
-- name: LAB 17 Submit INLINE JCL
+- name: LAB 18 Submit INLINE JCL
   hosts: zoslab
   gather_facts: false
   collections:
@@ -14,4 +14,3 @@
         encoding:
           from: ISO8859-1
           to: IBM-037
-     
