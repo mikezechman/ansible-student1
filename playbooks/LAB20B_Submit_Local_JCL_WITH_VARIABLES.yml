@@ -8,7 +8,7 @@
     job_owner: IBMUSER
     job_name: "GAMA0120"
     libname: JCL 
-    jcl_path: "{{ playbook_dir }}/tmpLAB20_jcl/rendered.jcl"
+    jcl_path: "{{ playbook_dir }}/tmpLAB/rendered.jcl"
     jcl_dataset_name: "{{ job_owner }}.TEMP.JCL"
 
   tasks:
