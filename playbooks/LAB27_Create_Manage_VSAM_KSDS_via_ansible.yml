@@ -40,8 +40,8 @@
               0002TEST RECORD 2
         - dd_output:
             dd_name: SYSPRINT
-          return_content:
-            type: text
+            return_content:
+              type: text
 
     register: repro_result
 
