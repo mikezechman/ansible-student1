@@ -15,7 +15,7 @@
   - name: Render JCL locally on control node
     ansible.builtin.template:
       src: JCL/hello_world_20.jcl
-      dest: "{{ jcl_path }}"
+      dest: "{{ jcl_path }}"  
     delegate_to: localhost
 
   - name: Show rendered JCL
