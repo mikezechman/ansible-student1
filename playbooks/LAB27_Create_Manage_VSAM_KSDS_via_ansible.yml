@@ -39,3 +39,12 @@
             content: |
               0001TEST RECORD 1
               0002TEST RECORD 2
+        - dd_name: SYSPRINT
+          return_content:
+            type: text
+
+    register: repro_result
+
+  - name: Show REPRO diagnostics
+    ansible.builtin.debug:
+      var: repro_result
