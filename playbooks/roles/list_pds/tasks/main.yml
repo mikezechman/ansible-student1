@@ -1,5 +1,5 @@
-  - name: List members in "{{ pds }}"
-      zos_tso_command:
-          commands:
-            - "LISTDS '{{ pds }}' MEMBERS"
-      register: result
+- name: List members in "{{ pds }}"
+  zos_tso_command:
+    commands:
+    - "LISTDS '{{ pds }}' MEMBERS"
+  register: result
