@@ -1,0 +1,20 @@
+- name: LAB 18 Submit INLINE JCL
+  hosts: zoslab
+  gather_facts: false
+  collections:
+    - ibm.ibm_zos_core
+  environment: "{{ environment_vars }}"    
+  vars:
+    pds: GAMA01/DEMO.JCLLIB
+    
+    
+  tasks:
+  - name: List members in "{{ pds }}"
+    zos_tso_command:
+        commands:
+          - "LISTDS '{{ pds }}' MEMBERS"
+    register: result
+
+    - name: Display result
+      debug:
+        msg: "{{ result }}"
