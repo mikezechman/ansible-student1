@@ -4,9 +4,7 @@
   collections:
     - ibm.ibm_zos_core
   environment: "{{ environment_vars }}"
-#  vars:
-#    zos_jcl_source: "GAMA01.DEMO.JCLLIB(LAB26)"
-  
+
   tasks:
   
   - name: Delete existing KSDS
