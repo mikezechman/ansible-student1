@@ -3,7 +3,7 @@
   gather_facts: false
   collections:
     - ibm.ibm_zos_core
-  environment: "{{ environment_vars }}"
+  environment: "{{ environment_vars }}"    
   vars:
     job_owner: IBMUSER
     job_name: "GAMA0120"
