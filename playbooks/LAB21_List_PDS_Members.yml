@@ -5,7 +5,7 @@
     - ibm.ibm_zos_core
   environment: "{{ environment_vars }}"    
   vars:
-    pds: GAMA01/DEMO.JCLLIB
+    pds: GAMA01.DEMO.JCLLIB
     
 
   tasks:
