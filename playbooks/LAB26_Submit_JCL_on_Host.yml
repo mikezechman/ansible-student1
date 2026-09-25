@@ -42,3 +42,9 @@
   - name: Print spool output
     debug:
       var: spool_output
+
+  - name: Validate return code
+    assert:
+      that:
+        - spool_output.jobs[0].return_code <= 8
+      fail_msg: "Job failed with return code {{ job_result.jobs[0].return_code }}"
