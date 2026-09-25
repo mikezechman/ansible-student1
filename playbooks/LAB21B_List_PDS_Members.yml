@@ -1,0 +1,19 @@
+- name: LAB 18 Submit INLINE JCL
+  hosts: zoslab
+  gather_facts: false
+  collections:
+    - ibm.ibm_zos_core
+  environment: "{{ environment_vars }}"    
+  vars:
+    pds: GAMA01.DEMO.JCLLIB
+    
+
+  tasks:
+  
+  - name: Call role to render LIST PDS Members
+    ansible.builtin.include_role:
+      name: list_pds
+      
+  - name: Display result
+    debug:
+      msg: "{{ result }}"
