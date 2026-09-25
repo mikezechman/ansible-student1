@@ -7,7 +7,7 @@
   vars:
     pds: GAMA01/DEMO.JCLLIB
     
-    
+
   tasks:
   - name: List members in "{{ pds }}"
     zos_tso_command:
@@ -15,6 +15,6 @@
           - "LISTDS '{{ pds }}' MEMBERS"
     register: result
 
-    - name: Display result
-      debug:
-        msg: "{{ result }}"
+  - name: Display result
+    debug:
+      msg: "{{ result }}"
