@@ -32,7 +32,7 @@
         - dd_input:
             dd_name: SYSIN
             content: |
-              "REPRO INFILE(INFILE) OUTDATASET('GAMA01.TEST.KSDS')"
+              REPRO INFILE(INFILE) OUTDATASET('GAMA01.TEST.KSDS')
         - dd_input:
             dd_name: INFILE
             content: |
