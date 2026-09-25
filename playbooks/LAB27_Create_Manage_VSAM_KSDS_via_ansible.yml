@@ -1,0 +1,44 @@
+- name: LAB 27 Manage VSAM KSDS via Ansible Functions
+  hosts: zoslab
+  gather_facts: false
+  collections:
+    - ibm.ibm_zos_core
+  environment: "{{ environment_vars }}"
+#  vars:
+#    zos_jcl_source: "GAMA01.DEMO.JCLLIB(LAB26)"
+  
+  tasks:
+  
+  - name: Delete existing KSDS
+  ibm.ibm_zos_core.zos_data_set:
+    name: GAMA01.TEST.KSDS
+    state: absent
+
+- name: Allocate KSDS
+  ibm.ibm_zos_core.zos_data_set:
+    name: GAMA01.TEST.KSDS
+    state: present
+    type: ksds
+    space_primary: 2
+    space_secondary: 1
+    space_type: cyl
+    key_length: 4
+    key_offset: 1
+    record_length: 80
+
+- name: Load KSDS from inline data
+  ibm.ibm_zos_core.zos_mvs_raw:
+    program_name: IDCAMS
+    auth: true
+    dds:
+      - dd_input:
+          dd_name: SYSIN
+          content: |
+            REPRO INFILE(INFILE) OUTDATASET(GAMA01.TEST.KSDS)
+
+      - dd_input:
+          dd_name: INFILE
+          content: |
+            0000000001John Smith
+            0000000002Jane Smith
+            0000000003Fred Jones
