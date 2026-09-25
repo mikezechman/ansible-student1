@@ -33,13 +33,13 @@
             dd_name: SYSIN
             content: |
               "REPRO INFILE(INFILE) OUTDATASET('GAMA01.TEST.KSDS')"
-
         - dd_input:
             dd_name: INFILE
             content: |
               0001TEST RECORD 1
               0002TEST RECORD 2
-        - dd_name: SYSPRINT
+        - dd_output:
+            dd_name: SYSPRINT
           return_content:
             type: text
 
