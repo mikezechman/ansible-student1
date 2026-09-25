@@ -21,7 +21,7 @@
       space_secondary: 1
       space_type: cyl
       key_length: 4
-      key_offset: 1
+      key_offset: 0
       record_length: 80
 
   - name: Load KSDS from inline data
@@ -37,6 +37,5 @@
         - dd_input:
             dd_name: INFILE
             content: |
-              0000000001John Smith
-              0000000002Jane Smith
-              0000000003Fred Jones
+              0001TEST RECORD 1
+              0002TEST RECORD 2
